@@ -1,0 +1,4 @@
+# Build output and generated code
+bin/
+obj/
+Generated Files/

@@ -1,0 +1,86 @@
+<Project DefaultTargets="Build"
+         xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{572958F4-4BDF-4423-93E4-71A54E44FECB}</ProjectGuid>
+    <ProjectName>HelloWinUI</ProjectName>
+    <RootNamespace>HelloWinUI</RootNamespace>
+
+    <EnableNativePackageReferenceSupport>true</EnableNativePackageReferenceSupport>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
+
+    <ApplicationType>Windows Store</ApplicationType>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+    <AppContainerApplication>false</AppContainerApplication>
+    <UseWinUI>true</UseWinUI>
+
+    <WindowsPackageType>None</WindowsPackageType>
+    <AppxPackage>false</AppxPackage>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+
+    <CppWinRTOptimized>true</CppWinRTOptimized>
+    <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
+  </PropertyGroup>
+
+  <!-- Separate bin/, build/ and src/ properly -->
+  <PropertyGroup>
+    <OutDir>$(MSBuildThisFileDirectory)..\bin\</OutDir>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\build\obj\</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>$(BaseIntermediateOutputPath)</MSBuildProjectExtensionsPath>
+    <IntDir>$(BaseIntermediateOutputPath)</IntDir>
+    <GeneratedFilesDir>$(MSBuildThisFileDirectory)..\build\Generated Files\</GeneratedFilesDir>
+  </PropertyGroup>
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+
+  <!-- Set name -->
+  <PropertyGroup>
+    <TargetName>HelloWinUI</TargetName>
+  </PropertyGroup>
+
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>DISABLE_XAML_GENERATED_MAIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.260804001" />
+    <PackageReference Include="Microsoft.Windows.CppWinRT" Version="2.0.250303.1" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.4654" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+    <ClCompile Include="App.xaml.cpp" />
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="pch.h" />
+    <Manifest Include="app.manifest" />
+  </ItemGroup>
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
