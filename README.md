@@ -10,18 +10,18 @@ Showcase a starter WinUI 3 project
 ## Build
 ### Install Dependencies
 <sub>x64 Native Tools Command Promp for VS</sub>
-```ps
+```cmd
 msbuild src/HelloWinUI.vcxproj /restore /p:Configuration=Debug /p:Platform=x64
 ```
 
 ### Clean previous build and rebuild 
 <sub>x64 Native Tools Command Promp for VS</sub>
-```ps
+```cmd
 msbuild src/HelloWinUI.vcxproj /t:Rebuild /p:Configuration=Debug /p:Platform=x64
 ```
 
 ### Incremental Build
 <sub>x64 Native Tools Command Promp for VS</sub>
-```ps
+```cmd
 msbuild src/HelloWinUI.vcxproj /p:Configuration=Debug /p:Platform=x64
 ```
