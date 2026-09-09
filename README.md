@@ -1,6 +1,6 @@
 # WinUI Starter
 
-Showcase a starter WinUI 3 project
+Project showcasing WinUI 3 to get things started
 
 ## Development
 - To compile via CLI get 'Build Tools for Visual Studio' from https://visualstudio.microsoft.com/downloads/  
