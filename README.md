@@ -1,4 +1,4 @@
-# WinUI Test
+# WinUI Starter
 
 Showcase a starter WinUI 3 project
 
