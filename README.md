@@ -1,6 +1,6 @@
-# WinUI Test
+# WinUI Starter
 
-Showcase a starter WinUI 3 project
+Project showcasing WinUI 3 to get things started
 
 ## Development
 - To compile via CLI get 'Build Tools for Visual Studio' from https://visualstudio.microsoft.com/downloads/  
@@ -24,4 +24,9 @@ msbuild src/HelloWinUI.vcxproj /t:Rebuild /p:Configuration=Debug /p:Platform=x64
 <sub>x64 Native Tools Command Promp for VS</sub>
 ```cmd
 msbuild src/HelloWinUI.vcxproj /p:Configuration=Debug /p:Platform=x64
+```
+
+## Run
+```cmd
+./bin/HelloWinUI.exe
 ```
