@@ -25,3 +25,8 @@ msbuild src/HelloWinUI.vcxproj /t:Rebuild /p:Configuration=Debug /p:Platform=x64
 ```cmd
 msbuild src/HelloWinUI.vcxproj /p:Configuration=Debug /p:Platform=x64
 ```
+
+## Run
+```cmd
+./bin/HelloWinUI.exe
+```
